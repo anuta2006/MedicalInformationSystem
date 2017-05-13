@@ -1,5 +1,4 @@
-﻿using MedicalInformationSystem.Common;
-using MedicalInformationSystem.UI.Navigation;
+﻿using MedicalInformationSystem.UI.Navigation;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.Regions;
@@ -12,40 +11,40 @@ using System.Windows.Input;
 
 namespace MedicalInformationSystem.UI.ViewModels.StartUp
 {
-    [UsedImplicitly]
     public class LandingViewModel : BindableBase, INavigationAware
     {
         private IRegionNavigationService _regionNavigationService;
 
-        public ICommand SignUpCommand { get; }
+        public ICommand SignUp { get; }
 
-        public ICommand SignInCommand { get; }
+        public ICommand SignIn{ get; }
 
         public LandingViewModel()
         {
-            SignUpCommand = new DelegateCommand(NavigateToSignUpView);
-            SignInCommand = new DelegateCommand(NavigateToSignInView);
+            SignIn = new DelegateCommand(NavigateToSignInView);
+            SignUp = new DelegateCommand(NavigateToSignUpView);
         }
 
-        bool INavigationAware.IsNavigationTarget(NavigationContext navigationContext)
+        public bool IsNavigationTarget(NavigationContext navigationContext)
             => true;
+        
 
-        void INavigationAware.OnNavigatedFrom(NavigationContext navigationContext)
+        public void OnNavigatedFrom(NavigationContext navigationContext)
         {
             
         }
 
-        void INavigationAware.OnNavigatedTo(NavigationContext navigationContext)
+        public void OnNavigatedTo(NavigationContext navigationContext)
             => _regionNavigationService = navigationContext.NavigationService;
-
-        private void NavigateToSignUpView()
-        {
-            _regionNavigationService.Navigate(MedicalInformationSystemRegions.MainRegion, MedicalInformationSystemViews.SignUpView);
-        }
 
         private void NavigateToSignInView()
         {
             _regionNavigationService.Navigate(MedicalInformationSystemRegions.MainRegion, MedicalInformationSystemViews.SignInView);
+        }
+
+        private void NavigateToSignUpView()
+        {
+            _regionNavigationService.Navigate(MedicalInformationSystemRegions.MainRegion, MedicalInformationSystemViews.SignUpView);
         }
     }
 }

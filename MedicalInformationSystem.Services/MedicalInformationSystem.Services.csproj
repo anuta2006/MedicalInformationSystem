@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,13 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorizationResult.cs" />
+    <Compile Include="DataContracts\ClassData.cs" />
     <Compile Include="DataContracts\ColumnAttribute.cs" />
+    <Compile Include="DataContracts\QualificationData.cs" />
+    <Compile Include="DataContracts\StudentData.cs" />
     <Compile Include="DataContracts\UserData.cs" />
+    <Compile Include="DataContracts\UserDoctorData.cs" />
+    <Compile Include="DataContracts\VaccinationData.cs" />
     <Compile Include="Interfaces\IMedicalInformationService.cs" />
     <Compile Include="MedicalInformationService.cs" />
     <Compile Include="OleDbClient\ErrorMessages.cs" />
     <Compile Include="OleDbClient\OleDbParameterCreationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MedicalInformationSystem.Common\MedicalInformationSystem.Common.csproj">

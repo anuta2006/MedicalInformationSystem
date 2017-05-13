@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="MedicalInformationSystem.UI.Views.Class.ClassesInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+             xmlns:ui="clr-namespace:MedicalInformationSystem.UI"
+             xmlns:viewModels="clr-namespace:MedicalInformationSystem.UI.ViewModels.Class"
+             xmlns:strings="clr-namespace:MedicalInformationSystem.Resources.Strings;assembly=MedicalInformationSystem.Resources"
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             d:DataContext="{d:DesignInstance viewModels:ClassesInfoViewModel}">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../../Themes/Styles.Class.xaml" />
+    </UserControl.Resources>
+
+    <StackPanel Width="780" VerticalAlignment="Top" HorizontalAlignment="Right" Height="522" Margin="0,10,10,0">
+        <StackPanel Height="50" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource BlockStyle}"  Text="Класс" />
+            <ComboBox x:Name="ClassComboBox" Style="{StaticResource ComboStyle}" ItemsSource="{Binding Classes}" SelectedItem="{Binding ClassSelectedItem}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="DropDownOpened">
+                        <i:InvokeCommandAction Command="{Binding UpdateClassesListCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <!--<Button Style="{StaticResource ButtonStyle}">Перевести на следующий год</Button>
+            <Button Style="{StaticResource ButtonStyle}">Удалить</Button>-->
+        </StackPanel>
+        <!--<DataGrid x:Name="dataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Width="23" Binding="{Binding Day1}"/>
+                <DataGridTextColumn Header="№" Width="30" Binding="{Binding Day}"/>
+                <DataGridTextColumn Header="Фамилия" Width="150" Binding="{Binding Month}"/>
+                <DataGridTextColumn Header="Имя" Width="150" Binding="{Binding Year}"/>
+                <DataGridTextColumn Header="Отчество" Width="150" Binding="{Binding DayOfWeek}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static strings:MSAResources.Reception}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static strings:MSAResources.ToEdit}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{x:Static strings:MSAResources.Remove}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+            <GridViewColumn Header="№" Width="40" DisplayMemberBinding="{Binding Day}"/>
+            <GridViewColumn Header="Фамилия" Width="150" DisplayMemberBinding="{Binding Month}"/>
+            <GridViewColumn Header="Имя" Width="150" DisplayMemberBinding="{Binding Year}"/>
+            <GridViewColumn Header="Отчество" Width="150" DisplayMemberBinding="{Binding DayOfWeek}"/>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button>Show/Hide</Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+        </DataGrid>-->
+
+
+        <ContentControl prism:RegionManager.RegionName="{x:Static ui:MedicalInformationSystemRegions.StudentRegion}" />
+
+    </StackPanel>
+</UserControl>

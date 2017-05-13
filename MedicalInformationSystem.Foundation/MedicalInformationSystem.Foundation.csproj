@@ -40,7 +40,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\AuthenticationCryptographer.cs" />
+    <Compile Include="Authentication\AuthenticationService.cs" />
+    <Compile Include="Comparers\ClassDataEqualityComparer.cs" />
+    <Compile Include="Comparers\StudentDataEqualityComparer.cs" />
+    <Compile Include="Comparers\VaccinationDataEqualityComparer.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\VaccinationController.cs" />
+    <Compile Include="Cryptography\CryptographicRng.cs" />
+    <Compile Include="Cryptography\Sha512Cryptographer.cs" />
+    <Compile Include="Factories\ClassControllerFactory.cs" />
+    <Compile Include="Factories\StudentControllerFactory.cs" />
+    <Compile Include="Factories\VaccinationControllerFactory.cs" />
+    <Compile Include="Interfaces\IAccountService.cs" />
+    <Compile Include="Interfaces\IAuthenticationCryptographer.cs" />
+    <Compile Include="Interfaces\IAuthenticationService.cs" />
+    <Compile Include="Interfaces\IClassController.cs" />
+    <Compile Include="Interfaces\IControllerViewModelFactory.cs" />
+    <Compile Include="Interfaces\IControllerViewModelProvider.cs" />
+    <Compile Include="Interfaces\ICryptographicRng.cs" />
+    <Compile Include="Interfaces\IEntityControllerFactory.cs" />
+    <Compile Include="Interfaces\IEntityControllerProvider.cs" />
+    <Compile Include="Interfaces\ISha512Cryptographer.cs" />
+    <Compile Include="Interfaces\IStudentController.cs" />
+    <Compile Include="Interfaces\IUserSettingsService.cs" />
+    <Compile Include="Interfaces\IVaccinationController.cs" />
+    <Compile Include="MediaData\AccountService.cs" />
+    <Compile Include="MediaData\ClassInfo.cs" />
+    <Compile Include="MediaData\StudentInfo.cs" />
+    <Compile Include="MediaData\StudentTransferInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CachingControllerViewModelProvider.cs" />
+    <Compile Include="Providers\CachingEntityControllerProvider.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Users\UserSettingsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MedicalInformationSystem.Common\MedicalInformationSystem.Common.csproj">
+      <Project>{DC528631-9AD9-43CF-B6CB-E88421422CFF}</Project>
+      <Name>MedicalInformationSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MedicalInformationSystem.Services\MedicalInformationSystem.Services.csproj">
+      <Project>{BE756520-666F-4389-827B-258341AECB05}</Project>
+      <Name>MedicalInformationSystem.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

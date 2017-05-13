@@ -12,11 +12,11 @@
              mvvm:ViewModelLocator.AutoWireViewModel="True"
              d:DataContext="{d:DesignInstance viewModels:SignInViewModel}">
 
-    <!--<UserControl.Resources>
+    <UserControl.Resources>
         <ResourceDictionary Source="../../Themes/Styles.StartUp.xaml" />
-    </UserControl.Resources>-->
+    </UserControl.Resources>
 
-    <Grid>
+    <Grid Style="{StaticResource RootLayoutPanelStyle}">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="700">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -25,9 +25,9 @@
             </Grid.RowDefinitions>
             <Grid>
                 <Grid.Resources>
-                    <!--<Style TargetType="TextBlock" BasedOn="{StaticResource AuthorizationTextBlockStyle}" />
+                    <Style TargetType="TextBlock" BasedOn="{StaticResource AuthorizationTextBlockStyle}" />
                     <Style TargetType="TextBox" BasedOn="{StaticResource AuthorizationTextBoxStyle}" />
-                    <Style TargetType="PasswordBox" BasedOn="{StaticResource AuthorizationPasswordBoxStyle}" />-->
+                    <Style TargetType="PasswordBox" BasedOn="{StaticResource AuthorizationPasswordBoxStyle}" />
                 </Grid.Resources>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -44,16 +44,14 @@
                 <TextBlock Grid.Row="1" Text="{x:Static strings:MSAResources.Password}" />
                 <PasswordBox Grid.Column="1" Grid.Row="1">
                     <interactivity:Interaction.Behaviors>
-                        <behaviors:UdatePasswordOnChangedBehavior Password="{Binding Password, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
+                        <behaviors:UpdatePasswordOnChangedBehavior Password="{Binding Password, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
                     </interactivity:Interaction.Behaviors>
                 </PasswordBox>
             </Grid>
 
-            <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}"
-                       Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
-            <ProgressBar Grid.Row="1" Visibility="{Binding IsSigningIn, Converter={StaticResource BooleanToVisibilityConverter}}"
-                         Style="{StaticResource AurhorizingProgressBarStyle}" />
+            <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
 
+            <ProgressBar Grid.Row="1" Visibility="{Binding IsSigningIn, Converter={StaticResource BooleanToVisibilityConverter}}" Style="{StaticResource AurhorizingProgressBarStyle}" />
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />

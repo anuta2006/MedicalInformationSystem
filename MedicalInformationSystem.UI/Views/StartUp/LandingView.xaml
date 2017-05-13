@@ -8,23 +8,22 @@
              xmlns:strings="clr-namespace:MedicalInformationSystem.Resources.Strings;assembly=MedicalInformationSystem.Resources"
              mc:Ignorable="d" 
              mvvm:ViewModelLocator.AutoWireViewModel="True"
-             d:DesignHeight="300" d:DesignWidth="300"
-             d:DataContext="{d:DesignInstance d:Type=viewModels:LandingViewModel}">
+             d:DataContext="{d:DesignInstance viewModels:LandingViewModel}">
 
 
-    <!--<UserControl.Resources>
+    <UserControl.Resources>
         <ResourceDictionary Source="../../Themes/Styles.StartUp.xaml" />
-    </UserControl.Resources>-->
+    </UserControl.Resources>
 
-    <Grid>
+    <Grid Style="{StaticResource RootLayoutPanelStyle}">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Button Content="{x:Static strings:MSAResources.SignUp}" Command="{Binding SignUpCommand}"/>
-            <Button Grid.Row="1" Content="{x:Static strings:MSAResources.SignIn}" Command="{Binding SingInCommand}"/>
+            <Button Content="{x:Static strings:MSAResources.SignUp}" Command="{Binding SignUp}" Style="{StaticResource AuthorizationButtonStyle}" />
+            <Button Grid.Row="1" Content="{x:Static strings:MSAResources.SignIn}" Command="{Binding SignIn}" Style="{StaticResource AuthorizationButtonStyle}" />
         </Grid>
     </Grid>
 </UserControl>

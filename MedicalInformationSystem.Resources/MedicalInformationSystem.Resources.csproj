@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Strings\MSAResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MSAResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

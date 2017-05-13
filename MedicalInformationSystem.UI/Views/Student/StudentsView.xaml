@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="MedicalInformationSystem.UI.Views.Student.StudentsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+             xmlns:ui="clr-namespace:MedicalInformationSystem.UI"
+             xmlns:viewModels="clr-namespace:MedicalInformationSystem.UI.ViewModels.Student"
+             xmlns:strings="clr-namespace:MedicalInformationSystem.Resources.Strings;assembly=MedicalInformationSystem.Resources"
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:interactivity="http://www.codeplex.com/prism"
+             mc:Ignorable="d" 
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             d:DataContext="{d:DesignInstance viewModels:StudentsViewModel}">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="../../Themes/Styles.Student.xaml" />
+    </UserControl.Resources>
+    <Grid>
+        <ListView ItemsSource="{Binding Students}" />
+    </Grid>
+</UserControl>
+
