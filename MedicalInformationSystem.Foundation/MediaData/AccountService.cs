@@ -19,7 +19,7 @@ namespace MedicalInformationSystem.Foundation.MediaData
         private readonly IEntityControllerProvider<ClassData, IClassController> _classControllerProvider;
         private readonly IEntityControllerProvider<StudentData, IStudentController> _studentControllerProvider;
         private readonly IEntityControllerProvider<VaccinationData, IVaccinationController> _vaccinationControllerProvider;
-
+        private readonly IEntityControllerProvider<DiseaseGroupData, IDiseaseGroupController> _diseaseGroupControllerProvider;
 
         private User _targetUser;
 
@@ -28,13 +28,15 @@ namespace MedicalInformationSystem.Foundation.MediaData
             IUserSettingsService userSettingsService,
             IEntityControllerProvider<ClassData, IClassController> classControllerProvider,
             IEntityControllerProvider<StudentData, IStudentController> studentControllerProvider,
-            IEntityControllerProvider<VaccinationData, IVaccinationController> vaccinationControllerProvider)
+            IEntityControllerProvider<VaccinationData, IVaccinationController> vaccinationControllerProvider,
+            IEntityControllerProvider<DiseaseGroupData, IDiseaseGroupController> diseaseGroupControllerProvider)
         {
             _medicalService = medicalService;
             _userSettingsService = userSettingsService;
             _classControllerProvider = classControllerProvider;
             _studentControllerProvider = studentControllerProvider;
             _vaccinationControllerProvider = vaccinationControllerProvider;
+            _diseaseGroupControllerProvider = diseaseGroupControllerProvider;
         }
 
 
@@ -83,6 +85,17 @@ namespace MedicalInformationSystem.Foundation.MediaData
             var rawVaccination = await _medicalService.GetVaccinationForStudentAsync(firstName, lastName, patronymic);
 
             return rawVaccination.Select(_vaccinationControllerProvider.GetControllerFor).ToList();
+        }
+
+        public async Task<IReadOnlyCollection<IDiseaseGroupController>> GetDiseaseGroupForStudentAsync(StudentInfo studentInfo)
+        {
+            var firstName = studentInfo.FirstName;
+            var lastName = studentInfo.LastName;
+            var patronymic = studentInfo.Patronymic;
+
+            var rawDiseaseGroup = await _medicalService.GetDiseaseGroupForStudentAsync(firstName, lastName, patronymic);
+
+            return rawDiseaseGroup.Select(_diseaseGroupControllerProvider.GetControllerFor).ToList();
         }
 
         private string GetCurrentUserLogin()

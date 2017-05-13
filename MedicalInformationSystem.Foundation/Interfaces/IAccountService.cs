@@ -15,5 +15,7 @@ namespace MedicalInformationSystem.Foundation.Interfaces
         Task<bool> DeleteStudentAsync(StudentInfo studentInfo);
 
         Task<bool> TransferToNextYearAsync(StudentTransferInfo transferInfo);
+
+        Task<IReadOnlyCollection<IDiseaseGroupController>> GetDiseaseGroupForStudentAsync(StudentInfo studentInfo);
     }
 }

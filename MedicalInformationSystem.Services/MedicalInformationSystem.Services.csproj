@@ -44,6 +44,7 @@
     <Compile Include="AuthorizationResult.cs" />
     <Compile Include="DataContracts\ClassData.cs" />
     <Compile Include="DataContracts\ColumnAttribute.cs" />
+    <Compile Include="DataContracts\DiseaseGroupData.cs" />
     <Compile Include="DataContracts\QualificationData.cs" />
     <Compile Include="DataContracts\StudentData.cs" />
     <Compile Include="DataContracts\UserData.cs" />

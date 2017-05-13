@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:vaccinations="clr-namespace:MedicalInformationSystem.UI.ViewModels.Vaccination"
+                    xmlns:diseaseGroup="clr-namespace:MedicalInformationSystem.UI.ViewModels.DiseaseGroup"
+                    xmlns:strings="clr-namespace:MedicalInformationSystem.Resources.Strings;assembly=MedicalInformationSystem.Resources"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <DataTemplate DataType="{x:Type vaccinations:VaccinationViewModel}">
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100px"/>
+                <ColumnDefinition Width="100px"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding Date}" />
+            <TextBlock Grid.Column="1" Text="{Binding Name}"  />
+            <!--<TextBlock Grid.Column="2" Text="{Binding Patronymic}"  />
+            <TextBlock Grid.Column="3" Text="{Binding BirthDate}"  />
+            <Grid Grid.Column="4">
+                <StackPanel Style="{StaticResource ManageMediaStackPanelStyle}">
+                    <Button Command="{Binding Path=DataContext.TransferNextYearCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}" 
+                            CommandParameter="{Binding}" 
+                            Style="{StaticResource ButtonStyle}" 
+                            Content="{x:Static strings:MSAResources.TransferNextYear}" />
+                    <Button Style="{StaticResource ButtonStyle}" 
+                            Content="{x:Static strings:MSAResources.Reception}" />
+                    <Button Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"
+                            CommandParameter="{Binding}" 
+                            Content="{x:Static strings:MSAResources.Remove}" 
+                            Style="{StaticResource ButtonStyle}" />
+                </StackPanel>
+            </Grid>-->
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type diseaseGroup:DiseaseGroupViewModel}">
+        <Grid HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100px"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding Name}" />
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

@@ -15,10 +15,10 @@
              d:DataContext="{d:DesignInstance viewModels:StudentEditViewModel}">
 
     <UserControl.Resources>
-        <ResourceDictionary Source="../../Themes/Styles.StartUp.xaml" />
+        <ResourceDictionary Source="../../Themes/Styles.StudentEdit.xaml" />
     </UserControl.Resources>
 
-    <Grid Style="{StaticResource RootLayoutPanelStyle}">
+    <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="700">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -26,9 +26,10 @@
             </Grid.RowDefinitions>
             <Grid>
                 <Grid.Resources>
-                    <Style TargetType="TextBlock" BasedOn="{StaticResource AuthorizationTextBlockStyle}" />
-                    <Style TargetType="TextBox" BasedOn="{StaticResource AuthorizationTextBoxStyle}" />
-                    <Style TargetType="PasswordBox" BasedOn="{StaticResource AuthorizationPasswordBoxStyle}" />
+                    <!--BasedOn="{StaticResource AuthorizationTextBlockStyle}"-->
+                    <Style TargetType="TextBlock"  />
+                    <Style TargetType="TextBox" />
+                    <Style TargetType="PasswordBox" />
                 </Grid.Resources>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -84,22 +85,24 @@
                 </Grid>
 
                 <TextBlock Grid.Row="6" Text="{x:Static strings:MSAResources.GroupDisease}" />
-                <ComboBox Grid.Row="6" Grid.Column="1" SelectedItem="0" Width="100px">
+                <ListView Grid.Row="6" Grid.Column="1" ItemsSource="{Binding DiseaseGroup}"/>
+                <!--<ComboBox Grid.Row="6" Grid.Column="1" SelectedItem="0" Width="100px">
                     <ComboBoxItem>5</ComboBoxItem>
-                </ComboBox>
+                </ComboBox>-->
 
 
                 <TextBlock Grid.Row="7" Text="{x:Static strings:MSAResources.Vaccination}" />
-                <ComboBox Grid.Row="7" Grid.Column="1" SelectedItem="0" Width="100px">
+                <ListView Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Vaccinations}"/>
+                <!--<ComboBox Grid.Row="7" Grid.Column="1" SelectedItem="0" Width="100px">
                     <ComboBoxItem>5</ComboBoxItem>
-                </ComboBox>
+                </ComboBox>-->
 
                 <!--<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Login, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />-->
 
 
             </Grid>
 
-            <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
+            <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
 
 
             <Grid Grid.Row="2">
@@ -108,8 +111,8 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" />
-                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Command="{Binding SignInCommand}" Style="{StaticResource AuthorizationButtonStyle}" />
+                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" />
+                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Command="{Binding SignInCommand}" />
             </Grid>
         </Grid>
     </Grid>

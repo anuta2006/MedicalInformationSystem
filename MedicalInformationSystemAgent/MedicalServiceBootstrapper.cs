@@ -26,6 +26,7 @@ using MedicalInformationSystem.Foundation.Comparers;
 using System.Collections.Generic;
 using MedicalInformationSystem.UI.ViewModels.Student;
 using MedicalInformationSystem.UI.ViewModels.Vaccination;
+using MedicalInformationSystem.UI.ViewModels.DiseaseGroup;
 
 namespace MedicalInformationSystemAgent
 {
@@ -72,24 +73,29 @@ namespace MedicalInformationSystemAgent
             Container.RegisterType<IEqualityComparer<StudentData>, StudentDataEqualityComparer>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEqualityComparer<ClassData>, ClassDataEqualityComparer>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEqualityComparer<VaccinationData>, VaccinationDataEqualityComparer>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IEqualityComparer<DiseaseGroupData>, DiseaseGroupEqualityComparer>(new ContainerControlledLifetimeManager());
 
 
             Container.RegisterType<IEntityControllerFactory<StudentData, IStudentController>, StudentControllerFactory>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEntityControllerFactory<ClassData, IClassController>, ClassControllerFactory>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEntityControllerFactory<VaccinationData, IVaccinationController>, VaccinationControllerFactory>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IEntityControllerFactory<DiseaseGroupData, IDiseaseGroupController>, DiseaseGroupControllerFactory>(new ContainerControlledLifetimeManager());
 
 
             Container.RegisterType<IEntityControllerProvider<StudentData, IStudentController>, CachingEntityControllerProvider<StudentData, IStudentController>>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEntityControllerProvider<ClassData, IClassController>, CachingEntityControllerProvider<ClassData, IClassController>>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEntityControllerProvider<VaccinationData, IVaccinationController>, CachingEntityControllerProvider<VaccinationData, IVaccinationController>>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IEntityControllerProvider<DiseaseGroupData, IDiseaseGroupController>, CachingEntityControllerProvider<DiseaseGroupData, IDiseaseGroupController>>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<IControllerViewModelFactory<IStudentController, StudentViewModel>, StudentViewModelFactory>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IControllerViewModelFactory<IClassController, ClassInfoViewModel>, ClassInfoViewModelFactory>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IControllerViewModelFactory<IVaccinationController, VaccinationViewModel>, VaccinationViewModelFactory>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IControllerViewModelFactory<IDiseaseGroupController, DiseaseGroupViewModel>, DiseaseGroupViewModelFactory>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<IControllerViewModelProvider<IStudentController, StudentViewModel>, CachingControllerViewModelProvider<IStudentController, StudentViewModel>>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IControllerViewModelProvider<IClassController, ClassInfoViewModel>, CachingControllerViewModelProvider<IClassController, ClassInfoViewModel>>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IControllerViewModelProvider<IVaccinationController, VaccinationViewModel>, CachingControllerViewModelProvider<IVaccinationController, VaccinationViewModel>>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IControllerViewModelProvider<IDiseaseGroupController, DiseaseGroupViewModel>, CachingControllerViewModelProvider<IDiseaseGroupController, DiseaseGroupViewModel>>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<IAuthenticationService, AuthenticationService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IUserSettingsService, UserSettingsService>(new ContainerControlledLifetimeManager());

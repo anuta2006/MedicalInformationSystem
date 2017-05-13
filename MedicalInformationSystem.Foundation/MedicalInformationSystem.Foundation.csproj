@@ -43,14 +43,17 @@
     <Compile Include="Authentication\AuthenticationCryptographer.cs" />
     <Compile Include="Authentication\AuthenticationService.cs" />
     <Compile Include="Comparers\ClassDataEqualityComparer.cs" />
+    <Compile Include="Comparers\DiseaseGroupEqualityComparer.cs" />
     <Compile Include="Comparers\StudentDataEqualityComparer.cs" />
     <Compile Include="Comparers\VaccinationDataEqualityComparer.cs" />
     <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\DiseaseGroupController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\VaccinationController.cs" />
     <Compile Include="Cryptography\CryptographicRng.cs" />
     <Compile Include="Cryptography\Sha512Cryptographer.cs" />
     <Compile Include="Factories\ClassControllerFactory.cs" />
+    <Compile Include="Factories\DiseaseGroupControllerFactory.cs" />
     <Compile Include="Factories\StudentControllerFactory.cs" />
     <Compile Include="Factories\VaccinationControllerFactory.cs" />
     <Compile Include="Interfaces\IAccountService.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="Interfaces\IControllerViewModelFactory.cs" />
     <Compile Include="Interfaces\IControllerViewModelProvider.cs" />
     <Compile Include="Interfaces\ICryptographicRng.cs" />
+    <Compile Include="Interfaces\IDiseaseGroupController.cs" />
     <Compile Include="Interfaces\IEntityControllerFactory.cs" />
     <Compile Include="Interfaces\IEntityControllerProvider.cs" />
     <Compile Include="Interfaces\ISha512Cryptographer.cs" />

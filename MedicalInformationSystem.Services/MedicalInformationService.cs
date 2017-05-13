@@ -42,7 +42,12 @@ namespace MedicalInformationSystem.Services
                     FROM (([Student]
                     INNER JOIN [StudentVaccination] ON StudentVaccination.StudentId = Student.Id)
                     INNER JOIN [Vaccination] ON Vaccination.Id = StudentVaccination.VaccinationId)
-                    WHERE ([FirstName]) = (?) AND([LastName]) = (?) AND([Patronymic]) = (?)";
+                    WHERE ([FirstName]) = (?) AND([LastName]) = (?) AND ([Patronymic]) = (?)";
+        private const string GetDiseaseGroupForStudentQuery = @"
+                    SELECT DiseaseGroup.Name
+                    FROM ([Student]
+                    INNER JOIN [DiseaseGroup] ON DiseaseGroup.Id = Student.DiseaseGroupId)
+                    WHERE ([FirstName]) = (?) AND ([LastName]) = (?) AND ([Patronymic]) = (?)";
 
         private const string AddUserDataQuery = @"
                     INSERT INTO Users ([Login], [PasswordSalt], [PasswordHash])
@@ -213,6 +218,19 @@ namespace MedicalInformationSystem.Services
             return vaccinationResult.IsSuccessful && vaccinationResult.Result.Count > 0
                 ? vaccinationResult.Result 
                 : new List<VaccinationData>();
+        }
+
+        public async Task<IReadOnlyCollection<DiseaseGroupData>> GetDiseaseGroupForStudentAsync(string firstName, string lastName, string patronymic)
+        {
+            var parameters = new[] {
+                firstName.AsOleDbInputParameter("@FirstName"),
+                lastName.AsOleDbInputParameter("@LastName"),
+                patronymic.AsOleDbInputParameter("@Patronymic") };
+            var diseaseGroupResult = await ExecuteReaderAsync<DiseaseGroupData>(GetDiseaseGroupForStudentQuery, parameters);
+
+            return diseaseGroupResult.IsSuccessful && diseaseGroupResult.Result.Count > 0
+                ? diseaseGroupResult.Result
+                : new List<DiseaseGroupData>();
         }
 
         private async Task<QualificationData> GetQualificationAsync(string name)

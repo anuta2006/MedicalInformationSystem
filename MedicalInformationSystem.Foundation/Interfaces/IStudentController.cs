@@ -25,5 +25,9 @@ namespace MedicalInformationSystem.Foundation.Interfaces
         string ClassLetter { get; set; }
 
         int ClassNumber { get; set; }
+
+        Task<IReadOnlyCollection<IVaccinationController>> GetVaccinationAsync();
+
+        Task<IReadOnlyCollection<IDiseaseGroupController>> GetDiseaseGroupAsync();
     }
 }

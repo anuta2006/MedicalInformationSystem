@@ -11,8 +11,7 @@ namespace MedicalInformationSystem.UI.ViewModels.Vaccination
 
         public string Name => _vaccinationController.Name;
 
-        public DateTime Date => _vaccinationController.Date;
-
+        public string Date => _vaccinationController.Date.Date.ToString("dd/MM/yyyy");
 
         public VaccinationViewModel(IVaccinationController vacController, IAccountService accountService)
         {

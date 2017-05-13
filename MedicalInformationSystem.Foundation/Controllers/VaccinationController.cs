@@ -14,5 +14,7 @@ namespace MedicalInformationSystem.Foundation.Controllers
             Date = date;
             Name = name;
         }
+
+
     }
 }

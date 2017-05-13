@@ -1,7 +1,12 @@
 ﻿using MedicalInformationSystem.Foundation.Interfaces;
+using MedicalInformationSystem.UI.ViewModels.DiseaseGroup;
+using MedicalInformationSystem.UI.ViewModels.Vaccination;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.Regions;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MedicalInformationSystem.UI.ViewModels.Student
 {
@@ -9,7 +14,10 @@ namespace MedicalInformationSystem.UI.ViewModels.Student
     {
         private readonly IStudentController _studentController;
         private readonly IAccountService _accountService;
-        
+
+        private readonly IControllerViewModelProvider<IVaccinationController, VaccinationViewModel> _vaccinationControllerViewModelProvider;
+        private readonly IControllerViewModelProvider<IDiseaseGroupController, DiseaseGroupViewModel> _diseaseGroupControllerViewModelProvider;
+
         public string FirstName
         {
             get
@@ -114,10 +122,28 @@ namespace MedicalInformationSystem.UI.ViewModels.Student
 
         public StudentViewModel(
             IStudentController studentController,
-            IAccountService accountService)
+            IAccountService accountService,
+            IControllerViewModelProvider<IVaccinationController, VaccinationViewModel> vaccinationProvider,
+            IControllerViewModelProvider<IDiseaseGroupController, DiseaseGroupViewModel> diseaseProvider)
         {
             _studentController = studentController;
             _accountService = accountService;
+            _vaccinationControllerViewModelProvider = vaccinationProvider;
+            _diseaseGroupControllerViewModelProvider = diseaseProvider;
+        }
+
+        public async Task<IReadOnlyCollection<VaccinationViewModel>> GetVaccinationAsync()
+        {
+            var vaccinations = await _studentController.GetVaccinationAsync();
+
+            return vaccinations.Select(_vaccinationControllerViewModelProvider.GetViewModelFor).ToList();
+        }
+
+        public async Task<IReadOnlyCollection<DiseaseGroupViewModel>> GetDiseaseGroupAsync()
+        {
+            var diseaseGroup = await _studentController.GetDiseaseGroupAsync();
+
+            return diseaseGroup.Select(_diseaseGroupControllerViewModelProvider.GetViewModelFor).ToList();
         }
     }
 }

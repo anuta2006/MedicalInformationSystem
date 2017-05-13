@@ -23,5 +23,7 @@ namespace MedicalInformationSystem.Services.Interfaces
         Task<bool> TransferToNextYearAsync(string firstName, string lastName, string patronymic, string classLetter, int classNumber);
 
         Task<IReadOnlyCollection<VaccinationData>> GetVaccinationForStudentAsync(string firstName, string lastName, string patronymic);
+
+        Task<IReadOnlyCollection<DiseaseGroupData>> GetDiseaseGroupForStudentAsync(string firstName, string lastName, string patronymic);
     }
 }

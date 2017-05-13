@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\ClassInfoViewModelFactory.cs" />
+    <Compile Include="Factories\DiseaseGroupViewModelFactory.cs" />
     <Compile Include="Factories\StudentViewModelFactory.cs" />
     <Compile Include="Factories\VaccinationViewModelFactory.cs" />
     <Compile Include="MedicalInformationSystemMainModule.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Class\ClassesInfoViewModel.cs" />
     <Compile Include="ViewModels\Class\ClassInfoViewModel.cs" />
+    <Compile Include="ViewModels\DiseaseGroup\DiseaseGroupViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Navigation\NavigationParameterKeys.cs" />
     <Compile Include="ViewModels\StartUp\LandingViewModel.cs" />
@@ -144,6 +146,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\Styles.StudentEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles.Student.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
