@@ -1,16 +1,19 @@
 ﻿using MedicalInformationSystem.Common;
 using MedicalInformationSystem.Foundation.Interfaces;
+using MedicalInformationSystem.UI.Navigation;
 using MedicalInformationSystem.UI.ViewModels.DiseaseGroup;
 using MedicalInformationSystem.UI.ViewModels.Navigation;
 using MedicalInformationSystem.UI.ViewModels.Student;
 using MedicalInformationSystem.UI.ViewModels.Vaccination;
 using Microsoft.Practices.Prism;
+using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 
 namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
 {
@@ -27,11 +30,15 @@ namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
         public IEnumerable<VaccinationViewModel> Vaccinations => _vaccinations;
         public IEnumerable<DiseaseGroupViewModel> DiseaseGroup => _diseaseGroup;
 
+        public ICommand GoBackCommand { get; }
+
         public StudentEditViewModel(IControllerViewModelProvider<IVaccinationController, VaccinationViewModel> provider)
         {
             _vaccinationControllerViewModelProvider = provider;
             _vaccinations = new ObservableCollection<VaccinationViewModel>();
             _diseaseGroup = new ObservableCollection<DiseaseGroupViewModel>();
+
+            GoBackCommand = new DelegateCommand(GoBack);
         }
 
         public StudentViewModel Student
@@ -51,7 +58,6 @@ namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
         {
-            throw new NotImplementedException();
         }
 
         public async void OnNavigatedTo(NavigationContext navigationContext)
@@ -70,6 +76,11 @@ namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
                 _diseaseGroup.Clear();
                 _diseaseGroup.AddRange(diseaseGroup);
             }
+        }
+
+        private void GoBack()
+        {
+            _regionNavigationService.Navigate(MedicalInformationSystemRegions.StudentRegion, MedicalInformationSystemViews.StudentsView);
         }
     }
 }

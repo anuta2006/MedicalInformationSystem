@@ -72,6 +72,10 @@ namespace MedicalInformationSystem.Services
                     UPDATE Student
                     SET [ClassId] = (?)
                     WHERE [FirstName] = (?) AND ([LastName]) = (?) AND ([Patronymic]) = (?)";
+        private const string EditStudentQuery = @"
+                    UPDATE Student
+                    SET [FirstName] = (?), [LastName] = (?), [Patronymic] = (?), [ClassId] = (?), [Address] = (?), [Weight] = (?), [Height] = (?)
+                    WHERE [FirstName] = (?) AND ([LastName]) = (?) AND ([Patronymic]) = (?)";
 
 
         private OleDbConnection _connection;
