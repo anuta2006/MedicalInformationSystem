@@ -107,7 +107,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic" />
+                <Button Content="{x:Static strings:MSAResources.Back}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic" />
                 <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"
                         Command="{Binding Path=DataContext.UpdateStudentCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}" 
                         CommandParameter="{Binding}" />
