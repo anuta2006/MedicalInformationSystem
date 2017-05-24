@@ -3,21 +3,24 @@
                     xmlns:converters="clr-namespace:MedicalInformationSystem.WpfProject.Converters;assembly=MedicalInformationSystem.WpfProject"
                     xmlns:strings="clr-namespace:MedicalInformationSystem.Resources.Strings;assembly=MedicalInformationSystem.Resources">
 
-   
+
     <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     <converters:StringToOpacityConverter x:Key="StringToOpacityConverter" />
- 
 
-    <SolidColorBrush x:Key="MusicServiceAgentWhiteBrush" Color="#ecf0f1" />
+
+
+    <SolidColorBrush x:Key="MusicServiceAgentWhiteBrush" Color="#ededed" />
     <SolidColorBrush x:Key="MusicServiceAgent20OpacityWhiteBrush" Color="#ecf0f1" Opacity="0.2" />
     <SolidColorBrush x:Key="MusicServiceAgent40OpacityWhiteBrush" Color="#ecf0f1" Opacity="0.4" />
-    <SolidColorBrush x:Key="MusicServiceAgentBlueBrush" Color="#3498db" />
-    <SolidColorBrush x:Key="MusicServiceAgentDarkBlueBrush" Color="#2980b9" />
-    <SolidColorBrush x:Key="MusicServiceAgentSteelBrush" Color="#95a5a6" />
+    <SolidColorBrush x:Key="MusicServiceAgentBlueBrush" Color="#0ddd72" />
+    <SolidColorBrush x:Key="MusicServiceAgentDarkBlueBrush" Color="#48703a" />
+    <SolidColorBrush x:Key="MusicServiceAgentStelBrush" Color="#66CDAA" />
+    <SolidColorBrush x:Key="MusicServiceAgentSteelBrush" Color="#9de283" />
     <SolidColorBrush x:Key="MusicServiceAgentBlackBrush" Color="Black" />
-    <SolidColorBrush x:Key="MusicServiceAgentMidnightBlueBrush" Color="#2c3e50" />
+    <SolidColorBrush x:Key="MusicServiceAgentMidnightBlueBrush" Color="#257f05" />
     <SolidColorBrush x:Key="MusicServiceAgentRedBrush" Color="#e74c3c" />
     <SolidColorBrush x:Key="MusicServiceAgentSilverBrush" Color="#bdc3c7" />
+    <SolidColorBrush x:Key="MusicServiceAgentSilveBrush" Color="#f5f5dc" />
     <SolidColorBrush x:Key="MusicServiceAgentSilver60OpacityBrush" Color="#bdc3c7" Opacity="0.6" />
     <SolidColorBrush x:Key="MusicServiceAgentGreenBrush" Color="#1abc9c" />
     <SolidColorBrush x:Key="MusicServiceAgentVioletBrush" Color="#8e44ad" />
@@ -27,6 +30,34 @@
         <Setter Property="HorizontalAlignment" Value="Right" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="Orientation" Value="Horizontal" />
+    </Style>
+    <Style x:Key="RootLayoutGrid" TargetType="Grid">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{StaticResource MusicServiceAgentSteelBrush}" />
+    </Style>
+
+    <Style x:Key="AuthorizationTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentBlackBrush}" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Margin" Value="6" />
+    </Style>
+    <Style x:Key="AuthorizationTextBoxStyle" TargetType="TextBox">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="6" />
+        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentMidnightBlueBrush}" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="AuthorizationPasswordBoxStyle" TargetType="PasswordBox">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="6" />
+        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentMidnightBlueBrush}" />
+        <Setter Property="FontSize" Value="18" />
     </Style>
 
     <Style x:Key="MediaDataListViewStyle" TargetType="ListView">
@@ -74,10 +105,30 @@
 
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Height" Value="25"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="Margin" Value="10,10,0,0"/>
-        <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="MinWidth" Value="90" />
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="5,0,5,0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="1" />
         <Setter Property="Width" Value="Auto" />
+    </Style>
+
+    <Style x:Key="AuthorizationErrorMessageTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="Width" Value="600" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentRedBrush}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Margin" Value="6" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <Style x:Key="AuthorizationButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="300" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Margin" Value="6" />
+        <Setter Property="Background" Value="{StaticResource MusicServiceAgentDarkBlueBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentWhiteBrush}" />
     </Style>
 </ResourceDictionary>

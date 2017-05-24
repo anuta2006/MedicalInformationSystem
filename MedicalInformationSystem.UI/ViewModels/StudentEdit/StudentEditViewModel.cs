@@ -32,6 +32,8 @@ namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
 
         public ICommand GoBackCommand { get; }
 
+        public ICommand UpdateStudentCommand { get; private set; }
+
         public StudentEditViewModel(IControllerViewModelProvider<IVaccinationController, VaccinationViewModel> provider)
         {
             _vaccinationControllerViewModelProvider = provider;
@@ -39,6 +41,7 @@ namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
             _diseaseGroup = new ObservableCollection<DiseaseGroupViewModel>();
 
             GoBackCommand = new DelegateCommand(GoBack);
+            UpdateStudentCommand = new DelegateCommand<object>(UpdateStudent);
         }
 
         public StudentViewModel Student
@@ -81,6 +84,12 @@ namespace MedicalInformationSystem.UI.ViewModels.StudentEdit
         private void GoBack()
         {
             _regionNavigationService.Navigate(MedicalInformationSystemRegions.StudentRegion, MedicalInformationSystemViews.StudentsView);
+        }
+
+        private void UpdateStudent(object obj)
+        {
+            var x = "sdfg";
+
         }
     }
 }

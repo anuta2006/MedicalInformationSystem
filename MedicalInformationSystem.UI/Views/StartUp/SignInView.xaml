@@ -58,8 +58,8 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" />
-                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.SignIn}" Command="{Binding SignInCommand}" Style="{StaticResource AuthorizationButtonStyle}" />
+                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"/>
+                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.SignIn}" Command="{Binding SignInCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"  />
             </Grid>
         </Grid>
     </Grid>

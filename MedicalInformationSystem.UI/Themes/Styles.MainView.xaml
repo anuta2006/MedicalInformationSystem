@@ -7,7 +7,7 @@
 
     <Style x:Key="BlockStyle" TargetType="TextBlock">
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Height" Value="18"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Margin" Value="10,10,0,0"/>
@@ -27,11 +27,12 @@
 
     <Style x:Key="TabItemStyle" TargetType="TabItem">
         <Setter Property="Height" Value="25"/>
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="Normal"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Width" Value="265"/>
+        <Setter Property="Width" Value="332"/>
+        <Setter Property="Background" Value="{StaticResource MusicServiceAgentDarkBlueBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentBlackBrush}" />
+
     </Style>
 
     <Style x:Key="RadioStyle" TargetType="RadioButton">

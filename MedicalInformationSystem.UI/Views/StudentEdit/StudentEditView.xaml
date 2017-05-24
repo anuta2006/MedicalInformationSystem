@@ -26,14 +26,13 @@
             </Grid.RowDefinitions>
             <Grid>
                 <Grid.Resources>
-                    <!--BasedOn="{StaticResource AuthorizationTextBlockStyle}"-->
-                    <Style TargetType="TextBlock"  />
-                    <Style TargetType="TextBox" />
-                    <Style TargetType="PasswordBox" />
+                    <Style TargetType="TextBlock" BasedOn="{StaticResource AuthorizationTextBlockStyle}" />
+                    <Style TargetType="TextBox" BasedOn="{StaticResource AuthorizationTextBoxStyle}" />
+                    <Style TargetType="PasswordBox" BasedOn="{StaticResource AuthorizationPasswordBoxStyle}" />
                 </Grid.Resources>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="61*" />
+                    <ColumnDefinition Width="114*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -44,20 +43,19 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="{x:Static strings:MSAResources.FirstName}" />
-                <TextBox Grid.Column="1" Text="{Binding Student.FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Text="{x:Static strings:MSAResources.FirstName}" Height="26" Margin="0,8,6,8" Width="39"/>
+                <TextBox Grid.Column="1" Text="{Binding Student.FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30"/>
 
-                <TextBlock Grid.Row="1" Text="{x:Static strings:MSAResources.LastName}" />
-                <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Student.LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Grid.Row="1" Text="{x:Static strings:MSAResources.LastName}" Height="26" Margin="0,8,6,8" Width="83" />
+                <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Student.LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30"/>
 
-                <TextBlock Grid.Row="2" Text="{x:Static strings:MSAResources.Patronymic}" />
-                <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Student.Patronymic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Grid.Row="2" Text="{x:Static strings:MSAResources.Patronymic}" Height="26" Margin="0,8,6,8" Width="85" />
+                <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Student.Patronymic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30"/>
 
-                <TextBlock Grid.Row="3" Text="{x:Static strings:MSAResources.Address}" />
+                <TextBlock Grid.Row="3" Text="{x:Static strings:MSAResources.Address}" Height="27" Margin="0,10,6,10" Width="51"/>
+
                 <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Student.Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock Grid.Column="0" Grid.Row="4" Text="{x:Static strings:MSAResources.Height}" />
@@ -71,6 +69,9 @@
                     <TextBox Grid.Row="0" Text="{Binding Student.Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="6,7,71.667,6.333" Grid.ColumnSpan="2" />
                     <TextBlock Grid.Column="2" Grid.Row="0" Text="{x:Static strings:MSAResources.Weight}" Margin="0,6,90,6.667" RenderTransformOrigin="-0.444,0.857" />
                     <TextBox Grid.Column="2" Grid.Row="0" Text="{Binding Student.Weight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" Margin="64.333,7,10.333,6.333" />
+
+
+
                 </Grid>
 
                 <TextBlock Grid.Row="5" Text="{x:Static strings:MSAResources.Class}" />
@@ -90,19 +91,14 @@
                     <ComboBoxItem>5</ComboBoxItem>
                 </ComboBox>-->
 
-
                 <TextBlock Grid.Row="7" Text="{x:Static strings:MSAResources.Vaccination}" />
                 <ListView Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Vaccinations}"/>
                 <!--<ComboBox Grid.Row="7" Grid.Column="1" SelectedItem="0" Width="100px">
                     <ComboBoxItem>5</ComboBoxItem>
                 </ComboBox>-->
-
-                <!--<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Login, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />-->
-
-
             </Grid>
 
-            <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
+            <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
 
 
             <Grid Grid.Row="2">
@@ -111,8 +107,10 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" />
-                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Command="{Binding SignInCommand}" />
+                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic" />
+                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"
+                        Command="{Binding Path=DataContext.UpdateStudentCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}" 
+                        CommandParameter="{Binding}" />
             </Grid>
         </Grid>
     </Grid>

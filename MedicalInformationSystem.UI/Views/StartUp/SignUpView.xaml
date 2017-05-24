@@ -11,7 +11,7 @@
              mc:Ignorable="d" 
              mvvm:ViewModelLocator.AutoWireViewModel="True"
              d:DataContext="{d:DesignInstance viewModels:SignUpViewModel}">
-    
+
     <UserControl.Resources>
         <ResourceDictionary Source="../../Themes/Styles.StartUp.xaml" />
     </UserControl.Resources>
@@ -31,7 +31,7 @@
                 </Grid.Resources>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
-                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -70,8 +70,8 @@
                 <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Patronymic, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock Grid.Row="6" Text="{x:Static strings:MSAResources.Qualification}" />
-                <ComboBox Grid.Column="1" Grid.Row="6" Name="phonesList" Text="{Binding Qualification, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}">
-                    <TextBlock>Первая категория</TextBlock>
+                <ComboBox Grid.Column="1" Grid.Row="6" Name="phonesList" Text="{Binding Qualification, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource AuthorizationComboboxStyle}">
+                    <TextBlock Background="#FF040303" Foreground="#FF080807" OpacityMask="#FF0C0C0B" >Первая категория</TextBlock>
                     <TextBlock>Вторая категория</TextBlock>
                     <TextBlock>Высшая категория</TextBlock>
                 </ComboBox>
@@ -88,8 +88,8 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" />
-                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.SignUp}" Command="{Binding SignUpCommand}" Style="{StaticResource AuthorizationButtonStyle}"/>
+                <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic" />
+                <Button Grid.Column="1" Content="{x:Static strings:MSAResources.SignUp}" Command="{Binding SignUpCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"/>
             </Grid>
         </Grid>
     </Grid>

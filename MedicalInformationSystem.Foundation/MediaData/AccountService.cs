@@ -3,10 +3,8 @@ using MedicalInformationSystem.Foundation.Interfaces;
 using MedicalInformationSystem.Foundation.Users;
 using MedicalInformationSystem.Services.DataContracts;
 using MedicalInformationSystem.Services.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MedicalInformationSystem.Foundation.MediaData
