@@ -89,7 +89,7 @@
                 <ListView Grid.Row="6" Grid.Column="1" ItemsSource="{Binding DiseaseGroup}" Style="{StaticResource ListStyle}" />
                 
                 <TextBlock Grid.Row="6" Text="{x:Static strings:MSAResources.Vaccination}" Margin="0,95,37,72" />
-                <ListView Grid.Row="6" Grid.Column="1" ItemsSource="{Binding Vaccinations}" Style="{StaticResource ListStyle}" Margin="10,95,46,59"/>
+                <ListView Grid.Row="6" Grid.Column="1" ItemsSource="{Binding Vaccinations}" Style="{StaticResource ListStyle}" Margin="10,95,10,60"/>
                 
             </Grid>
 
