@@ -9,22 +9,30 @@
     <Style x:Key="AuthorizationGridStyle" TargetType="Grid">
         <Setter Property="Width" Value="1000" />
         <Setter Property="Height" Value="20" />
-        <Setter Property="Margin" Value="6" />
+      
         <Setter Property="Background" Value="{StaticResource MusicServiceAgentSteelBrush}" />
+    </Style>
+
+    <Style x:Key="ButtonStyle" TargetType="Button">
+    <Setter Property="HorizontalAlignment" Value="Right" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+    <Setter Property="Padding" Value="12,6" />
+    <Setter Property="Margin" Value="0,0,20,0" />
+    <Setter Property="Background" Value="{StaticResource MusicServiceAgentDarkBlueBrush}" />
+    <Setter Property="FontSize" Value="6" />
+    <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
 
 
-
-
-    <DataTemplate DataType="{x:Type students:StudentViewModel}">
-        <Grid HorizontalAlignment="Stretch" Style="{StaticResource AuthorizationGridStyle }">
-            <Grid.ColumnDefinitions>
+    <DataTemplate DataType="{x:Type students:StudentViewModel}" >
+        <Grid HorizontalAlignment="Stretch" Style="{StaticResource AuthorizationGridStyle }" ScrollViewer.HorizontalScrollBarVisibility="Hidden" >
+            <Grid.ColumnDefinitions > 
                 <ColumnDefinition Width="100px"/>
                 <ColumnDefinition Width="100px"/>
                 <ColumnDefinition Width="100px"/>
                 <ColumnDefinition Width="80px"/>
-                <ColumnDefinition Width="620px"/>
+                <ColumnDefinition Width="520px"/>
             </Grid.ColumnDefinitions>
 
             <Grid.InputBindings>
@@ -38,7 +46,7 @@
             <TextBlock Grid.Column="2" Text="{Binding Patronymic}"  />
             <TextBlock Grid.Column="3" Text="{Binding BirthDate}"  />
             <Grid Grid.Column="4">
-                <StackPanel Style="{StaticResource ManageMediaStackPanelStyle}">
+                <StackPanel Style="{StaticResource ManageMediaStackPanelStyle}" >
                     <Button Command="{Binding Path=DataContext.TransferNextYearCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}" 
                             CommandParameter="{Binding}" 
                             Style="{StaticResource ButtonStyle}" 
