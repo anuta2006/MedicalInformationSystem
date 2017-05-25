@@ -106,6 +106,24 @@ namespace MedicalInformationSystem.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Диагноз.
+        /// </summary>
+        public static string Diagnosis {
+            get {
+                return ResourceManager.GetString("Diagnosis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Назначение.
+        /// </summary>
+        public static string Drugs {
+            get {
+                return ResourceManager.GetString("Drugs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Редактирование.
         /// </summary>
         public static string Edit {
@@ -174,6 +192,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Замечания.
+        /// </summary>
+        public static string Notes {
+            get {
+                return ResourceManager.GetString("Notes", resourceCulture);
             }
         }
         
@@ -264,6 +291,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         public static string SignUp {
             get {
                 return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Симптомы.
+        /// </summary>
+        public static string Symptoms {
+            get {
+                return ResourceManager.GetString("Symptoms", resourceCulture);
             }
         }
         

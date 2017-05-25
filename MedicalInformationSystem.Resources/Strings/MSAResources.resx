@@ -132,6 +132,12 @@
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Подтвердите пароль</value>
   </data>
+  <data name="Diagnosis" xml:space="preserve">
+    <value>Диагноз</value>
+  </data>
+  <data name="Drugs" xml:space="preserve">
+    <value>Назначение</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Редактирование</value>
   </data>
@@ -155,6 +161,9 @@
   </data>
   <data name="Login" xml:space="preserve">
     <value>Логин</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Замечания</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Пароль</value>
@@ -185,6 +194,9 @@
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Зарегистрироваться</value>
+  </data>
+  <data name="Symptoms" xml:space="preserve">
+    <value>Симптомы</value>
   </data>
   <data name="ToEdit" xml:space="preserve">
     <value>Редактировать</value>

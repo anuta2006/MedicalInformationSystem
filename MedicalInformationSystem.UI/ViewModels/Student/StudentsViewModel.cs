@@ -43,6 +43,8 @@ namespace MedicalInformationSystem.UI.ViewModels.Student
 
         public ICommand EditStudentCommand { get; private set; }
 
+        public ICommand ReceptionCommand { get; private set; }
+
         public StudentsViewModel(
              IAccountService accountService,
              IControllerViewModelProvider<IStudentController, StudentViewModel> provider)
@@ -53,6 +55,7 @@ namespace MedicalInformationSystem.UI.ViewModels.Student
             EditStudentCommand = new DelegateCommand<object>(EditStudent);
             DeleteCommand = new DelegateCommand<object>(Delete);
             TransferNextYearCommand = new DelegateCommand<object>(TransferNextYear);
+            ReceptionCommand = new DelegateCommand<object>(Reception);
 
             _students = new ObservableCollection<StudentViewModel>();
         }
@@ -79,6 +82,14 @@ namespace MedicalInformationSystem.UI.ViewModels.Student
 
                 _students.Remove(student);
             }
+        }
+
+        private void Reception(object obj)
+        {
+            var student = obj as StudentViewModel;
+            _regionNavigationService.Navigate(MedicalInformationSystemRegions.StudentRegion,
+                        MedicalInformationSystemViews.StudentReceptionView,
+                        new Dictionary<string, object> { [NavigationParameterKeys.Student] = student });
         }
 
         bool INavigationAware.IsNavigationTarget(NavigationContext navigationContext)

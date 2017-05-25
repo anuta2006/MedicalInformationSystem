@@ -11,6 +11,8 @@
 
         private const string StudentEditViewName = nameof(Views.StudentEdit.StudentEditView);
 
+        private const string StudentReceptionViewName = nameof(Views.StudentEdit.StudentReceptionView);
+
         private const string ClassesInfoViewName = nameof(Views.Class.ClassesInfoView);
 
         public static string LandingView => LandingViewName;
@@ -26,5 +28,7 @@
         public static string StudentsView => StudentsViewName;
 
         public static string StudentEditView => StudentEditViewName;
+
+        public static string StudentReceptionView => StudentReceptionViewName;
     }
 }

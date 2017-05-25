@@ -27,6 +27,7 @@ namespace MedicalInformationSystem.UI
 
             _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.StudentRegion, typeof(StudentsView));
             _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.StudentRegion, typeof(StudentEditView));
+            _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.StudentRegion, typeof(StudentReceptionView));
 
             _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.ClassInfoRegion, typeof(ClassesInfoView));
 

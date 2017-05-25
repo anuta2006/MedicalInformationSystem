@@ -43,7 +43,9 @@
                             CommandParameter="{Binding}" 
                             Style="{StaticResource ButtonStyle}" 
                             Content="{x:Static strings:MSAResources.TransferNextYear}" />
-                    <Button Style="{StaticResource ButtonStyle}" 
+                    <Button Command="{Binding Path=DataContext.ReceptionCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}" 
+                            CommandParameter="{Binding}"
+                            Style="{StaticResource ButtonStyle}" 
                             Content="{x:Static strings:MSAResources.Reception}" />
                     <Button Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"
                             CommandParameter="{Binding}" 
