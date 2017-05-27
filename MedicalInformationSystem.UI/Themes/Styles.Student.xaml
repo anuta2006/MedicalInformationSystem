@@ -23,7 +23,14 @@
     <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
-
+    <Style x:Key="StudentViweListViewStyle" TargetType="ListView">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontWeight" Value="10"/>
+        <Setter Property="Width" Value="1000" />
+        <Setter Property="Height" Value="1000" />
+        <Setter Property="Background" Value="{StaticResource MusicServiceAgentDarkBlueBrush}" />
+        <Setter Property="SelectionMode" Value="Single" />
+    </Style>
 
     <DataTemplate DataType="{x:Type students:StudentViewModel}" >
         <Grid HorizontalAlignment="Stretch" Style="{StaticResource AuthorizationGridStyle }" ScrollViewer.HorizontalScrollBarVisibility="Hidden" >
