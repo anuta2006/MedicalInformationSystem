@@ -38,6 +38,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="{x:Static strings:MSAResources.Symptoms}" Height="26" Margin="0,8,6,8" />
@@ -56,8 +57,22 @@
                     </ComboBox>
                 </Grid>
 
+
                 <TextBlock Grid.Row="1" Text="{x:Static strings:MSAResources.Diagnosis}" Height="26" Margin="0,8,6,8" />
-                <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Diagnosis, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="45" Margin="0,6"/>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <ListView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding StudentDrugs}"/>
+                    <ComboBox Grid.Row="0" Grid.Column="1"  ItemsSource="{Binding AllDrugs}" SelectedItem="{Binding DrugsSelectedItem}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="DropDownOpened">
+                                <i:InvokeCommandAction Command="{Binding UpdateDrugsListCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                </Grid>
 
                 <TextBlock Grid.Row="2" Text="{x:Static strings:MSAResources.Drugs}" Height="26" Margin="0,8,6,8" />
                 <Grid Grid.Column="1" Grid.Row="2">
@@ -74,6 +89,10 @@
                         </i:Interaction.Triggers>
                     </ComboBox>
                 </Grid>
+
+
+                <TextBlock Grid.Row="3" Text="{x:Static strings:MSAResources.Diagnosis}" Height="26" Margin="0,8,6,8" />
+                <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Diagnosis, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30"/>
 
             </Grid>
             <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
