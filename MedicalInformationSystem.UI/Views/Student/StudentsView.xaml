@@ -18,7 +18,8 @@
         <ResourceDictionary Source="../../Themes/Styles.Student.xaml" />
     </UserControl.Resources>
     <Grid Style="{StaticResource RootLayoutGrid}" >
-        <ListView ItemsSource="{Binding Students}" Style="{StaticResource StudentViweListViewStyle}"/>
+        <ListView ItemsSource="{Binding Students}" Style="{StaticResource StudentViweListViewStyle}" />
+        
     </Grid>
 </UserControl>
 

@@ -17,19 +17,19 @@
         <ResourceDictionary Source="../../Themes/Styles.Reports.xaml" />
     </UserControl.Resources>
 
-    <StackPanel>
+    <StackPanel Background="#9de283">
         <TabControl SelectedIndex="1" TabStripPlacement="Left">
-            <TabItem Header="{x:Static strings:MSAResources.ReceptionsByPeriod}">
-                <StackPanel>
-                    <StackPanel  Height="30" Orientation="Horizontal">
-                        <TextBlock Text="{x:Static strings:MSAResources.Start}" />
+            <TabItem Header="{x:Static strings:MSAResources.ReceptionsByPeriod}" Style="{StaticResource TabItem}">
+                <StackPanel Background="#9de283">
+                    <StackPanel  Height="30" Width="700" Orientation="Horizontal" Background="#9de283">
+                        <TextBlock Text="{x:Static strings:MSAResources.Start}" Margin="200,0,0,0"/>
                         <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                         <TextBlock Text="{x:Static strings:MSAResources.End}" />
                         <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                     </StackPanel>
-                    <ListView ItemsSource="{Binding ReportsByPeriod}">
+                    <ListView ItemsSource="{Binding ReportsByPeriod}" Background="#9de283" >
                         <ListView.View>
-                            <GridView>
+                            <GridView >
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Date}" DisplayMemberBinding="{Binding Date}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.LastName}" DisplayMemberBinding="{Binding LastName}" />
@@ -44,23 +44,23 @@
                     </ListView>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="{x:Static strings:MSAResources.ReceptionsByClass}">
-                <StackPanel>
-                    <StackPanel Height="50" Orientation="Horizontal">
-                        <TextBlock Style="{StaticResource BlockStyle}" Text="{x:Static strings:MSAResources.Class}"  FontWeight="Normal" />
-                        <ComboBox x:Name="ClassComboBox" ItemsSource="{Binding Classes}" SelectedItem="{Binding ClassSelectedItem}">
+            <TabItem Header="{x:Static strings:MSAResources.ReceptionsByClass}" Style="{StaticResource TabItem}">
+                <StackPanel Background="#9de283" >
+                    <StackPanel Height="30" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource BlockStyle}" Text="{x:Static strings:MSAResources.Class}"  FontWeight="Normal" Margin="5"/>
+                        <ComboBox x:Name="ClassComboBox" ItemsSource="{Binding Classes}" SelectedItem="{Binding ClassSelectedItem}" Width="30">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="DropDownOpened">
                                     <i:InvokeCommandAction Command="{Binding UpdateClassesListCommand}"/>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </ComboBox>
-                        <TextBlock Text="{x:Static strings:MSAResources.Start}" />
+                        <TextBlock Text="{x:Static strings:MSAResources.Start}" Margin="5"/>
                         <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
-                        <TextBlock Text="{x:Static strings:MSAResources.End}" />
+                        <TextBlock Text="{x:Static strings:MSAResources.End}" Margin="5"/>
                         <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                     </StackPanel>
-                    <ListView ItemsSource="{Binding ReceptionsByClass}">
+                    <ListView ItemsSource="{Binding ReceptionsByClass}" Background="#9de283">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Date}" DisplayMemberBinding="{Binding Date}" />
@@ -76,23 +76,23 @@
                     </ListView>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="{x:Static strings:MSAResources.ReportsByDesiase}">
-                <StackPanel>
-                    <StackPanel Height="50" Orientation="Horizontal">
-                        <TextBlock Style="{StaticResource BlockStyle}" Text="{x:Static strings:MSAResources.GroupDisease}" FontWeight="Normal" />
-                        <ComboBox ItemsSource="{Binding DesiaseGroups}" SelectedItem="{Binding DesiaseGroupSelectedItem}">
+            <TabItem Header="{x:Static strings:MSAResources.ReportsByDesiase}" Style="{StaticResource TabItem}">
+                <StackPanel Background="#9de283">
+                    <StackPanel Height="30" Width="800" Orientation="Horizontal" >
+                        <TextBlock Style="{StaticResource BlockStyle}" Text="{x:Static strings:MSAResources.GroupDisease}" FontWeight="Normal" Width="142" Margin="5" />
+                        <ComboBox ItemsSource="{Binding DesiaseGroups}" SelectedItem="{Binding DesiaseGroupSelectedItem}" Width="200" >
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="DropDownOpened">
                                     <i:InvokeCommandAction Command="{Binding UpdateDesiasesListCommand}"/>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </ComboBox>
-                        <TextBlock Text="{x:Static strings:MSAResources.Start}" />
+                        <TextBlock Text="{x:Static strings:MSAResources.Start}" Margin="5"/>
                         <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
-                        <TextBlock Text="{x:Static strings:MSAResources.End}" />
+                        <TextBlock Text="{x:Static strings:MSAResources.End}" Margin="5"/>
                         <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                     </StackPanel>
-                    <ListView ItemsSource="{Binding ReportsByDesiase}">
+                    <ListView ItemsSource="{Binding ReportsByDesiase}" Background="#9de283">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
@@ -106,5 +106,18 @@
                 </StackPanel>
             </TabItem>
         </TabControl>
+        <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic" />
+            <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"
+                        Command="{Binding DataContext.UpdateStudentCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}" 
+                        CommandParameter="{Binding}" />
+        </Grid>
     </StackPanel>
 </UserControl>

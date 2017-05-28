@@ -12,7 +12,7 @@
     <SolidColorBrush x:Key="MusicServiceAgentWhiteBrush" Color="#ededed" />
     <SolidColorBrush x:Key="MusicServiceAgent20OpacityWhiteBrush" Color="#ecf0f1" Opacity="0.2" />
     <SolidColorBrush x:Key="MusicServiceAgent40OpacityWhiteBrush" Color="#ecf0f1" Opacity="0.4" />
-    <SolidColorBrush x:Key="MusicServiceAgentBlueBrush" Color="#0ddd72" />
+    <SolidColorBrush x:Key="MusicServiceAgentBlueBrush" Color="#ADFF2F" />
     <SolidColorBrush x:Key="MusicServiceAgentDarkBlueBrush" Color="#48703a" />
     <SolidColorBrush x:Key="MusicServiceAgentStelBrush" Color="#66CDAA" />
     <SolidColorBrush x:Key="MusicServiceAgentSteelBrush" Color="#9de283" />
