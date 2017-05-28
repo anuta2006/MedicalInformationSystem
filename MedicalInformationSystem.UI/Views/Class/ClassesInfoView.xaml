@@ -29,51 +29,6 @@
             <!--<Button Style="{StaticResource ButtonStyle}">Перевести на следующий год</Button>
             <Button Style="{StaticResource ButtonStyle}">Удалить</Button>-->
         </StackPanel>
-        <!--<DataGrid x:Name="dataGrid" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Width="23" Binding="{Binding Day1}"/>
-                <DataGridTextColumn Header="№" Width="30" Binding="{Binding Day}"/>
-                <DataGridTextColumn Header="Фамилия" Width="150" Binding="{Binding Month}"/>
-                <DataGridTextColumn Header="Имя" Width="150" Binding="{Binding Year}"/>
-                <DataGridTextColumn Header="Отчество" Width="150" Binding="{Binding DayOfWeek}"/>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="{x:Static strings:MSAResources.Reception}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="{x:Static strings:MSAResources.ToEdit}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="{x:Static strings:MSAResources.Remove}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-
-            <GridViewColumn Header="№" Width="40" DisplayMemberBinding="{Binding Day}"/>
-            <GridViewColumn Header="Фамилия" Width="150" DisplayMemberBinding="{Binding Month}"/>
-            <GridViewColumn Header="Имя" Width="150" DisplayMemberBinding="{Binding Year}"/>
-            <GridViewColumn Header="Отчество" Width="150" DisplayMemberBinding="{Binding DayOfWeek}"/>
-            <DataGridTemplateColumn>
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <Button>Show/Hide</Button>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
-        </DataGrid>-->
-
-
         <ContentControl prism:RegionManager.RegionName="{x:Static ui:MedicalInformationSystemRegions.StudentRegion}" />
-
     </StackPanel>
 </UserControl>

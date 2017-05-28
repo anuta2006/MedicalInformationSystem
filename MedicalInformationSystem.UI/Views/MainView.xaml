@@ -22,8 +22,12 @@
             <TabItem Header="{x:Static strings:MSAResources.ClassInfo}" Style="{StaticResource TabItemStyle}">
                 <ContentControl prism:RegionManager.RegionName="{x:Static ui:MedicalInformationSystemRegions.ClassInfoRegion}" />
             </TabItem>
-            <TabItem Header="{x:Static strings:MSAResources.Reports}" Style="{StaticResource TabItemStyle}" Content="Content for Tab 2"/>
-            <TabItem Header="{x:Static strings:MSAResources.Edit}" Style="{StaticResource TabItemStyle}" Content="Content for Tab 3"/>
+            <TabItem Header="{x:Static strings:MSAResources.Reports}" Style="{StaticResource TabItemStyle}">
+                <ContentControl prism:RegionManager.RegionName="{x:Static ui:MedicalInformationSystemRegions.ReportsRegion}" />
+            </TabItem>
+            <TabItem Header="{x:Static strings:MSAResources.Edit}" Style="{StaticResource TabItemStyle}">
+                <ContentControl prism:RegionManager.RegionName="{x:Static ui:MedicalInformationSystemRegions.EditRegion}" />
+            </TabItem>
         </TabControl>
 
 

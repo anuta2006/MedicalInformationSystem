@@ -11,15 +11,6 @@
         <Setter Property="Background" Value="{StaticResource MusicServiceAgentSteelBrush}" />
     </Style>
 
-    <Style x:Key="AuthorizationComboboxStyle" TargetType="ComboBox">
-        <Setter Property="Width" Value="Auto" />
-        <Setter Property="Height" Value="35" />
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="Margin" Value="6" />
-        <Setter Property="Background" Value="{StaticResource MusicServiceAgentSilveBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource MusicServiceAgentWhiteBrush}" />
-    </Style>
-
     <Style x:Key="AurhorizingProgressBarStyle" TargetType="ProgressBar">
         <Setter Property="IsIndeterminate" Value="True" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />

@@ -29,24 +29,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
+  <!-- <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'"> -->
+  <!-- <DebugSymbols>true</DebugSymbols> -->
+  <!-- <OutputPath>bin\x86\Debug\</OutputPath> -->
+  <!-- <DefineConstants>DEBUG;TRACE</DefineConstants> -->
+  <!-- <DebugType>full</DebugType> -->
+  <!-- <PlatformTarget>x86</PlatformTarget> -->
+  <!-- <ErrorReport>prompt</ErrorReport> -->
+  <!-- <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet> -->
+  <!-- </PropertyGroup> -->
+  <!-- <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'"> -->
+  <!-- <OutputPath>bin\x86\Release\</OutputPath> -->
+  <!-- <DefineConstants>TRACE</DefineConstants> -->
+  <!-- <Optimize>true</Optimize> -->
+  <!-- <DebugType>pdbonly</DebugType> -->
+  <!-- <PlatformTarget>x86</PlatformTarget> -->
+  <!-- <ErrorReport>prompt</ErrorReport> -->
+  <!-- <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet> -->
+  <!-- </PropertyGroup> -->
   <ItemGroup>
     <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -104,8 +104,11 @@
     <Compile Include="ViewModels\Class\ClassesInfoViewModel.cs" />
     <Compile Include="ViewModels\Class\ClassInfoViewModel.cs" />
     <Compile Include="ViewModels\DiseaseGroup\DiseaseGroupViewModel.cs" />
+    <Compile Include="ViewModels\Edit\EditViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Navigation\NavigationParameterKeys.cs" />
+    <Compile Include="ViewModels\Reports\ReportsViewModel.cs" />
+    <Compile Include="ViewModels\Reports\ReportViewModel.cs" />
     <Compile Include="ViewModels\StartUp\LandingViewModel.cs" />
     <Compile Include="ViewModels\StartUp\SignInViewModel.cs" />
     <Compile Include="ViewModels\StartUp\SignUpViewModel.cs" />
@@ -117,8 +120,14 @@
     <Compile Include="Views\Class\ClassesInfoView.xaml.cs">
       <DependentUpon>ClassesInfoView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Edit\EditView.xaml.cs">
+      <DependentUpon>EditView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StartUp\LandingView.xaml.cs">
       <DependentUpon>LandingView.xaml</DependentUpon>
@@ -140,7 +149,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Vaccination\" />
@@ -168,6 +179,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\Styles.Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Styles.Reports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles.StudentEdit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -196,7 +215,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Edit\EditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Reports\ReportsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

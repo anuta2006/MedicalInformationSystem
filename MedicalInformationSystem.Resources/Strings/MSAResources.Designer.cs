@@ -70,6 +70,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Добавить студента.
+        /// </summary>
+        public static string AddStudent {
+            get {
+                return ResourceManager.GetString("AddStudent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Назад.
         /// </summary>
         public static string Back {
@@ -106,6 +115,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Дата.
+        /// </summary>
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Диагноз.
         /// </summary>
         public static string Diagnosis {
@@ -129,6 +147,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конец.
+        /// </summary>
+        public static string End {
+            get {
+                return ResourceManager.GetString("End", resourceCulture);
             }
         }
         
@@ -223,6 +250,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Назначения.
+        /// </summary>
+        public static string Purpose {
+            get {
+                return ResourceManager.GetString("Purpose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Квалификация.
         /// </summary>
         public static string Qualification {
@@ -241,6 +277,24 @@ namespace MedicalInformationSystem.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Обращения по классу.
+        /// </summary>
+        public static string ReceptionsByClass {
+            get {
+                return ResourceManager.GetString("ReceptionsByClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обращения за период.
+        /// </summary>
+        public static string ReceptionsByPeriod {
+            get {
+                return ResourceManager.GetString("ReceptionsByPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Удалить.
         /// </summary>
         public static string Remove {
@@ -255,6 +309,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         public static string Reports {
             get {
                 return ResourceManager.GetString("Reports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отчет по хроническим заболеваниям.
+        /// </summary>
+        public static string ReportsByDesiase {
+            get {
+                return ResourceManager.GetString("ReportsByDesiase", resourceCulture);
             }
         }
         
@@ -291,6 +354,15 @@ namespace MedicalInformationSystem.Resources.Strings {
         public static string SignUp {
             get {
                 return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Начало.
+        /// </summary>
+        public static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
             }
         }
         

@@ -20,6 +20,8 @@ namespace MedicalInformationSystem.UI.ViewModels
             _regionNavigationService = navigationContext.NavigationService;
 
             _regionNavigationService.Navigate(MedicalInformationSystemRegions.ClassInfoRegion, MedicalInformationSystemViews.ClassInfoView);
+            _regionNavigationService.Navigate(MedicalInformationSystemRegions.ReportsRegion, MedicalInformationSystemViews.ReportsView);
+            _regionNavigationService.Navigate(MedicalInformationSystemRegions.EditRegion, MedicalInformationSystemViews.EditView);
         }
 
         bool INavigationAware.IsNavigationTarget(NavigationContext navigationContext)

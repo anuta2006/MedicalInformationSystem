@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
                     xmlns:vaccinations="clr-namespace:MedicalInformationSystem.UI.ViewModels.Vaccination"
                     xmlns:diseaseGroup="clr-namespace:MedicalInformationSystem.UI.ViewModels.DiseaseGroup"
+                    xmlns:reports="clr-namespace:MedicalInformationSystem.UI.ViewModels.Reports"
                     xmlns:strings="clr-namespace:MedicalInformationSystem.Resources.Strings;assembly=MedicalInformationSystem.Resources"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
@@ -17,7 +18,7 @@
 
             <TextBlock Text="{Binding Date}" />
             <TextBlock Grid.Column="1" Text="{Binding Name}"  />
-           
+
         </Grid>
     </DataTemplate>
 
