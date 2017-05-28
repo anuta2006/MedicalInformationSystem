@@ -1,5 +1,7 @@
 ﻿using MedicalInformationSystem.UI.Views;
 using MedicalInformationSystem.UI.Views.Class;
+using MedicalInformationSystem.UI.Views.Edit;
+using MedicalInformationSystem.UI.Views.Reports;
 using MedicalInformationSystem.UI.Views.StartUp;
 using MedicalInformationSystem.UI.Views.Student;
 using MedicalInformationSystem.UI.Views.StudentEdit;
@@ -30,6 +32,10 @@ namespace MedicalInformationSystem.UI
             _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.StudentRegion, typeof(StudentReceptionView));
 
             _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.ClassInfoRegion, typeof(ClassesInfoView));
+
+            _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.ReportsRegion, typeof(ReportsView));
+
+            _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.EditRegion, typeof(EditView));
 
            // _regionManager.RegisterViewWithRegion(MedicalInformationSystemRegions.StudentEditRegion, typeof(StudentEditView));
 

@@ -120,6 +120,9 @@
   <data name="Address" xml:space="preserve">
     <value>Адрес</value>
   </data>
+  <data name="AddStudent" xml:space="preserve">
+    <value>Добавить студента</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>Назад</value>
   </data>
@@ -132,6 +135,9 @@
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Подтвердите пароль</value>
   </data>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
   <data name="Diagnosis" xml:space="preserve">
     <value>Диагноз</value>
   </data>
@@ -140,6 +146,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Редактирование</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>Конец</value>
   </data>
   <data name="FirstCategory" xml:space="preserve">
     <value>Первая категория</value>
@@ -171,17 +180,29 @@
   <data name="Patronymic" xml:space="preserve">
     <value>Отчество</value>
   </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>Назначения</value>
+  </data>
   <data name="Qualification" xml:space="preserve">
     <value>Квалификация</value>
   </data>
   <data name="Reception" xml:space="preserve">
     <value>Прием</value>
   </data>
+  <data name="ReceptionsByClass" xml:space="preserve">
+    <value>Обращения по классу</value>
+  </data>
+  <data name="ReceptionsByPeriod" xml:space="preserve">
+    <value>Обращения за период</value>
+  </data>
   <data name="Remove" xml:space="preserve">
     <value>Удалить</value>
   </data>
   <data name="Reports" xml:space="preserve">
     <value>Отчеты</value>
+  </data>
+  <data name="ReportsByDesiase" xml:space="preserve">
+    <value>Отчет по хроническим заболеваниям</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>
@@ -194,6 +215,9 @@
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Зарегистрироваться</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Начало</value>
   </data>
   <data name="Symptoms" xml:space="preserve">
     <value>Симптомы</value>
