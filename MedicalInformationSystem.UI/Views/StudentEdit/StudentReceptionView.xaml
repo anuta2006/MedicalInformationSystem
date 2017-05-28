@@ -48,7 +48,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <ListView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding StudentSymptoms}"/>
-                    <ComboBox Grid.Row="0" Grid.Column="2"  ItemsSource="{Binding AllSymptoms}" SelectedItem="{Binding SymptomsSelectedItem}">
+                    <ComboBox Grid.Row="0"  ItemsSource="{Binding AllSymptoms}" SelectedItem="{Binding SymptomsSelectedItem}" Grid.ColumnSpan="2">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="DropDownOpened">
                                 <i:InvokeCommandAction Command="{Binding UpdateStudentsListCommand}"/>
@@ -81,7 +81,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <ListView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding StudentDrugs}"/>
-                    <ComboBox Grid.Row="0" Grid.Column="1"  ItemsSource="{Binding AllDrugs}" SelectedItem="{Binding DrugsSelectedItem}">
+                    <ComboBox Grid.Row="0"  ItemsSource="{Binding AllDrugs}" SelectedItem="{Binding DrugsSelectedItem}" Grid.ColumnSpan="2">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="DropDownOpened">
                                 <i:InvokeCommandAction Command="{Binding UpdateDrugsListCommand}"/>

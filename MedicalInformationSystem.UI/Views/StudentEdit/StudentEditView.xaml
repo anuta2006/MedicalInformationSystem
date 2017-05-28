@@ -54,7 +54,7 @@
                 <TextBlock Grid.Row="2" Text="{x:Static strings:MSAResources.Patronymic}" Height="26" Margin="0,8,6,8" Width="85" />
                 <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Student.Patronymic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="30" />
 
-                <TextBlock Grid.Row="3" Text="{x:Static strings:MSAResources.Address}" Margin="0,2,38,0" VerticalAlignment="Top" RenderTransformOrigin="0.186,0.565" HorizontalAlignment="Right" Width="51" Height="30"/>
+                <TextBlock Grid.Row="3" Text="{x:Static strings:MSAResources.Address}" Margin="0,0,423,0" VerticalAlignment="Top" RenderTransformOrigin="0.186,0.565" HorizontalAlignment="Right" Width="90" Height="30" Grid.ColumnSpan="2"/>
 
                 <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Student.Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
@@ -87,10 +87,10 @@
 
                 <TextBlock Grid.Row="6" Text="{x:Static strings:MSAResources.GroupDisease}" Margin="0,24,10,143" />
                 <ListView Grid.Row="6" Grid.Column="1" ItemsSource="{Binding DiseaseGroup}" Style="{StaticResource ListStyle}" />
-                
+
                 <TextBlock Grid.Row="6" Text="{x:Static strings:MSAResources.Vaccination}" Margin="0,95,37,72" />
                 <ListView Grid.Row="6" Grid.Column="1" ItemsSource="{Binding Vaccinations}" Style="{StaticResource ListStyle}" Margin="10,95,10,60"/>
-                
+
             </Grid>
 
             <TextBlock Grid.Row="1" Text="{Binding ErrorMessage}" Style="{StaticResource AuthorizationErrorMessageTextBlockStyle}" Opacity="{Binding ErrorMessage, Converter={StaticResource StringToOpacityConverter}}" />
