@@ -14,13 +14,14 @@
     </Style>
 
     <Style x:Key="ButtonStyle" TargetType="Button">
-    <Setter Property="HorizontalAlignment" Value="Right" />
-    <Setter Property="VerticalAlignment" Value="Stretch" />
-    <Setter Property="Padding" Value="12,6" />
-    <Setter Property="Margin" Value="0,0,20,0" />
-    <Setter Property="Background" Value="{StaticResource MusicServiceAgentDarkBlueBrush}" />
-    <Setter Property="FontSize" Value="6" />
-    <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Height" Value="20px" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Padding" Value="10, 0" />
+        <Setter Property="Margin" Value="20,0,20,0" />
+        <Setter Property="Background" Value="{StaticResource MusicServiceAgentDarkBlueBrush}" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style x:Key="StudentViweListViewStyle" TargetType="ListView">
@@ -35,11 +36,11 @@
     <DataTemplate DataType="{x:Type students:StudentViewModel}" >
         <Grid HorizontalAlignment="Stretch" Style="{StaticResource AuthorizationGridStyle }" ScrollViewer.HorizontalScrollBarVisibility="Hidden" >
             <Grid.ColumnDefinitions > 
+                <ColumnDefinition Width="130px"/>
+                <ColumnDefinition Width="130px"/>
+                <ColumnDefinition Width="130px"/>
                 <ColumnDefinition Width="100px"/>
-                <ColumnDefinition Width="100px"/>
-                <ColumnDefinition Width="100px"/>
-                <ColumnDefinition Width="80px"/>
-                <ColumnDefinition Width="520px"/>
+                <ColumnDefinition Width="420px"/>
             </Grid.ColumnDefinitions>
 
             <Grid.InputBindings>
@@ -48,10 +49,10 @@
                               CommandParameter="{Binding}"/>
             </Grid.InputBindings>
 
-            <TextBlock Text="{Binding FirstName}" />
-            <TextBlock Grid.Column="1" Text="{Binding LastName}"  />
-            <TextBlock Grid.Column="2" Text="{Binding Patronymic}"  />
-            <TextBlock Grid.Column="3" Text="{Binding BirthDate}"  />
+            <TextBlock Text="{Binding FirstName}" FontSize="16px"  />
+            <TextBlock Grid.Column="1" Text="{Binding LastName}"  FontSize="16px"  />
+            <TextBlock Grid.Column="2" Text="{Binding Patronymic}"  FontSize="16px"  />
+            <TextBlock Grid.Column="3" Text="{Binding BirthDate}"  FontSize="16px"  />
             <Grid Grid.Column="4">
                 <StackPanel Style="{StaticResource ManageMediaStackPanelStyle}" >
                     <Button Command="{Binding Path=DataContext.TransferNextYearCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}" 

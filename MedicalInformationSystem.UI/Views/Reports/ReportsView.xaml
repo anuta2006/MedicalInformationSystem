@@ -23,16 +23,16 @@
                 <StackPanel Background="#9de283">
                     <StackPanel  Height="30" Width="700" Orientation="Horizontal" Background="#9de283">
                         <TextBlock Text="{x:Static strings:MSAResources.Start}" Margin="200,0,0,0"/>
-                        <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
+                        <DatePicker IsDropDownOpen="False" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                         <TextBlock Text="{x:Static strings:MSAResources.End}" />
-                        <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
+                        <DatePicker IsDropDownOpen="False" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                     </StackPanel>
                     <ListView ItemsSource="{Binding ReportsByPeriod}" Background="#9de283" >
                         <ListView.View>
                             <GridView >
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Date}" DisplayMemberBinding="{Binding Date}" />
-                                <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.LastName}" DisplayMemberBinding="{Binding LastName}" />
+                                <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Patronymic}" DisplayMemberBinding="{Binding Patronymic}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Class}" DisplayMemberBinding="{Binding Class}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Symptoms}" DisplayMemberBinding="{Binding Symptoms}" />
@@ -56,16 +56,16 @@
                             </i:Interaction.Triggers>
                         </ComboBox>
                         <TextBlock Text="{x:Static strings:MSAResources.Start}" Margin="5"/>
-                        <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
+                        <DatePicker IsDropDownOpen="False" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                         <TextBlock Text="{x:Static strings:MSAResources.End}" Margin="5"/>
-                        <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
+                        <DatePicker IsDropDownOpen="False" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                     </StackPanel>
                     <ListView ItemsSource="{Binding ReceptionsByClass}" Background="#9de283">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Date}" DisplayMemberBinding="{Binding Date}" />
-                                <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.LastName}" DisplayMemberBinding="{Binding LastName}" />
+                                <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Patronymic}" DisplayMemberBinding="{Binding Patronymic}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Symptoms}" DisplayMemberBinding="{Binding Symptoms}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Diagnosis}" DisplayMemberBinding="{Binding Diagnosis}" />
@@ -88,15 +88,15 @@
                             </i:Interaction.Triggers>
                         </ComboBox>
                         <TextBlock Text="{x:Static strings:MSAResources.Start}" Margin="5"/>
-                        <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
+                        <DatePicker IsDropDownOpen="False" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                         <TextBlock Text="{x:Static strings:MSAResources.End}" Margin="5"/>
-                        <DatePicker IsDropDownOpen="True" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
+                        <DatePicker IsDropDownOpen="False" SelectedDateFormat="Short" SelectedDate="1/1/2012" DisplayDateStart="1/1/12" DisplayDateEnd="12/31/12" FirstDayOfWeek="Monday" />
                     </StackPanel>
                     <ListView ItemsSource="{Binding ReportsByDesiase}" Background="#9de283">
                         <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
+                            <GridView>                            
                                 <GridViewColumn Header="{x:Static strings:MSAResources.LastName}" DisplayMemberBinding="{Binding LastName}" />
+                                <GridViewColumn Header="{x:Static strings:MSAResources.FirstName}" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Patronymic}" DisplayMemberBinding="{Binding Patronymic}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Symptoms}" DisplayMemberBinding="{Binding BirthDate}" />
                                 <GridViewColumn Header="{x:Static strings:MSAResources.Class}" DisplayMemberBinding="{Binding Class}" />
@@ -116,8 +116,9 @@
 
             <Button Content="{x:Static strings:MSAResources.Back}" Command="{Binding GoBackCommand}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic" />
             <Button Grid.Column="1" Content="{x:Static strings:MSAResources.Save}" Style="{StaticResource AuthorizationButtonStyle}" FontStyle="Italic"
-                        Command="{Binding DataContext.UpdateStudentCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}" 
+                        Command="{Binding DataContext.SaveAsDocCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}" 
                         CommandParameter="{Binding}" />
+            
         </Grid>
     </StackPanel>
 </UserControl>

@@ -1,71 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MedicalInformationSystem.Services.MedicalInformationService">
+    <Position X="5.75" Y="1.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAIECAwEAkAAEgICUICMAFRAAGABUhAAAAABWA=</HashCode>
+      <FileName>MedicalInformationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.121" />
+  </Class>
   <Class Name="MedicalInformationSystem.Services.DataContracts.ClassData" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataContracts\ClassData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.ColumnAttribute" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DataContracts\ColumnAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.DiseaseGroupData" Collapsed="true">
-    <Position X="2.25" Y="1.75" Width="1.5" />
+  <Class Name="MedicalInformationSystem.Services.DataContracts.DiseaseGroupData">
+    <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataContracts\DiseaseGroupData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.QualificationData" Collapsed="true">
-    <Position X="4" Y="1.75" Width="1.5" />
+  <Class Name="MedicalInformationSystem.Services.DataContracts.QualificationData">
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataContracts\QualificationData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.StudentData" Collapsed="true">
-    <Position X="0.5" Y="2.75" Width="1.5" />
+  <Class Name="MedicalInformationSystem.Services.DataContracts.StudentData">
+    <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAGAABAAAAAAAAEAAAAQAQCAAAAACAAAAAAAAAAg=</HashCode>
       <FileName>DataContracts\StudentData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.UserData" Collapsed="true">
-    <Position X="2.25" Y="2.75" Width="1.5" />
+  <Class Name="MedicalInformationSystem.Services.DataContracts.UserData">
+    <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>DataContracts\UserData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.UserDoctorData" Collapsed="true">
-    <Position X="4" Y="2.75" Width="1.5" />
+  <Class Name="MedicalInformationSystem.Services.DataContracts.UserDoctorData">
+    <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAg=</HashCode>
       <FileName>DataContracts\UserDoctorData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.DataContracts.VaccinationData" Collapsed="true">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+  <Class Name="MedicalInformationSystem.Services.DataContracts.VaccinationData">
+    <Position X="4" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>DataContracts\VaccinationData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MedicalInformationSystem.Services.MedicalInformationService" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AEAABAAIECAwEAkAAEgICUICMAFRAAGEBUgAAAAABWA=</HashCode>
-      <FileName>MedicalInformationService.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Interface Name="MedicalInformationSystem.Services.Interfaces.IMedicalInformationService" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="0.5" Y="1.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgEAEAAAgAAQIAEAEAAAAAAQgAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMedicalInformationService.cs</FileName>

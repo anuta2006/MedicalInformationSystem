@@ -17,7 +17,7 @@ namespace MedicalInformationSystem.Services
 {
     public class MedicalInformationService : IMedicalInformationService
     {
-        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;Data Source=..\\..\\..\\..\\MedicalInformationSystem.Services\\bin\\Debug\\BD_Diplom.accdb";
+        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;Data Source=..\\..\\..\\MedicalInformationSystem.Services\\bin\\Debug\\BD_Diplom.accdb";
         //System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName), "BD_Diplom.accdb");
 
         //string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;Data Source=D:\\Diplom\\MedicalInformationSystem\\MedicalInformationSystem.Services\\bin\\Debug\\BD_Diplom.accdb";

@@ -71,9 +71,9 @@
 
                 <TextBlock Grid.Row="6" Text="{x:Static strings:MSAResources.Qualification}" />
                 <ComboBox Grid.Column="1" Grid.Row="6" Name="phonesList" Text="{Binding Qualification, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource AuthorizationComboboxStyle}">
-                    <TextBlock Background="#FF040303" Foreground="#FF080807" OpacityMask="#FF0C0C0B" >Первая категория</TextBlock>
-                    <TextBlock>Вторая категория</TextBlock>
-                    <TextBlock>Высшая категория</TextBlock>
+                    <TextBlock FontSize="18">Первая категория</TextBlock>
+                    <TextBlock FontSize="18">Вторая категория</TextBlock>
+                    <TextBlock FontSize="18">Высшая категория</TextBlock>
                 </ComboBox>
             </Grid>
 

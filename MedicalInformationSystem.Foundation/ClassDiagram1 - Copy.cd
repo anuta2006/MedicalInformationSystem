@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MedicalInformationSystem.Foundation.MediaData.AccountService">
+    <Position X="0.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgICAAAEAAAgAAEAAAEAAQJAEAAAAAAAAQAAABAACAA=</HashCode>
+      <FileName>MediaData\AccountService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MedicalInformationSystem.Foundation.Controllers.ClassController" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ClassController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MedicalInformationSystem.Foundation.Controllers.DiseaseGroupController" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\DiseaseGroupController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MedicalInformationSystem.Foundation.Controllers.StudentController" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgGABBAAEAAAAAAAAAAYAACAAAAACAAAAAAEAAAg=</HashCode>
+      <FileName>Controllers\StudentController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MedicalInformationSystem.Foundation.Controllers.VaccinationController" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\VaccinationController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MedicalInformationSystem.Foundation.Interfaces.IAccountService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAEAAAAAAQIAEAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAccountService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MedicalInformationSystem.Foundation.Interfaces.IClassController" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IClassController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MedicalInformationSystem.Foundation.Interfaces.IDiseaseGroupController" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDiseaseGroupController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MedicalInformationSystem.Foundation.Interfaces.IStudentController" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGABBAAEAAAAAAAAAAYAACAAAAACAAAAAAEAAAg=</HashCode>
+      <FileName>Interfaces\IStudentController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MedicalInformationSystem.Foundation.Interfaces.IVaccinationController" Collapsed="true">
+    <Position X="7.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IVaccinationController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
